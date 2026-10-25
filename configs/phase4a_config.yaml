@@ -1,0 +1,18 @@
+scope:
+  exact_camera_count: 119
+  inferred_camera_mappings: prohibited
+  source_candidates: restricted/phase3a_candidate_transitions/candidates/candidate_transitions.parquet
+  classified_output: restricted/phase4a_transition_classification
+duration_sensitivity_seconds: [60, 300, 600, 900, 1800, 3600, 7200, 14400]
+speed_sensitivity_kph: [30, 50, 70, 90, 110, 130, 160, 200]
+exploratory_rules:
+  long_gap_reference_seconds: 14400
+  global_max_speed_kph: 130
+  route_speed_tolerance: 1.5
+  empirical_min_count: 100
+  empirical_min_weeks: 4
+governance:
+  thresholds_final: false
+  final_corridors: prohibited
+  dataset_splits: prohibited
+  dashboard: prohibited

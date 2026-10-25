@@ -1,0 +1,13 @@
+phase: 8
+name: privacy-aware inferred journey-chain reconstruction
+input_glob: restricted/phase5_final_mobility_outputs/final_legs/origin_week=*/*.parquet
+restricted_output_root: restricted/phase8_inferred_journey_chains
+checkpoint_path: checkpoints/phase8_journey_chains.json
+gap_threshold_minutes: [15, 30, 60, 120]
+primary_gap_threshold_minutes: 30
+privacy_suppression_k: 10
+authorised_linkage_period: within_origin_week_only
+cross_week_linkage: prohibited_unless_governance_is_proven
+input_term: plausible observed inter-camera journey leg
+output_term: inferred journey chain
+token_reporting: prohibited

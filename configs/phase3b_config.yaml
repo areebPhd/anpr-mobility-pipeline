@@ -1,0 +1,27 @@
+study_area:
+  project_evidence: data/input/network/tynewear.geojson
+  project_evidence_status: opaque_filename_only
+  external_boundary_query: Tyne and Wear, England, United Kingdom
+  boundary_status: external_exact_place_name_pending_record
+osm:
+  snapshot: "2018-12-31T23:59:59Z"
+  network_type: drive
+  simplify: true
+  retain_all: true
+  overpass_url: https://overpass-api.de/api
+  filter: OSMnx network_type=drive default drivable-way filter
+outputs:
+  restricted_root: restricted/phase3b_camera_osm
+  graph: restricted/phase3b_camera_osm/network/tyne_wear_drive_2018.graphml
+  boundary: restricted/phase3b_camera_osm/boundary/tyne_wear_boundary.geojson
+  osm_cameras: restricted/phase3b_camera_osm/osm/osm_surveillance_2018.parquet
+evidence_grades:
+  A: original verified metadata
+  B: coordinates recovered from valid legacy objects
+  C: externally mapped camera with defensible identifier match
+  D: spatially inferred candidate requiring manual validation
+  E: unresolved
+methodology:
+  camera_direction_from_transitions: prohibited
+  route_calculation: prohibited
+  speed_calculation: prohibited

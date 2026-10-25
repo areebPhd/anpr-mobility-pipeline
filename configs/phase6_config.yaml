@@ -1,0 +1,23 @@
+phase: 6
+title: Final Chapter 3 statistics, figures, maps and dashboard evidence
+parent_commit: 4a1155363c7b46272c6f8dea883ccf8be4496970
+privacy:
+  minimum_count: 10
+  prohibit_sequence_keys: true
+  prohibit_vehicle_tokens: true
+figures:
+  format: svg
+  width_px: 1600
+  height_px: 1000
+  top_od_pairs: 15
+  mapped_corridors: 30
+spatial:
+  evidence_grade: A
+  allow_inferred_cameras: false
+dashboard:
+  offline: true
+  external_assets: false
+  drilldown: false
+scope:
+  rewrite_chapter3: false
+  row_level_output: false

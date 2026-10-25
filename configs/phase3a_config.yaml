@@ -1,0 +1,21 @@
+phase2_config: configs/chapter3_config.yaml
+phase2_checkpoint: checkpoints/runtime/full_profile.json
+restricted_root: restricted/phase3a_candidate_transitions
+checkpoint: checkpoints/runtime/phase3a_full.json
+logs: logs/phase3a_full.log
+runtime:
+  threads: 40
+  memory_limit: 150GB
+  temporary_directory: /tmp/ch3_phase3a
+  parquet_compression: zstd
+ordering:
+  timestamp_status: naive_timezone_unresolved
+  tie_break: [timestamp, source_week, source_record_number, camera, confidence]
+repeat_gap_seconds: [0, 1, 5, 10, 30, 60]
+duration_sensitivity_seconds: [300, 900, 1800, 3600, 7200, 14400]
+methodology:
+  final_study_period: unresolved
+  confidence_threshold: unresolved
+  near_duplicate_policy: unresolved
+  transition_duration_threshold: unresolved
+  cross_week_identity_continuity: unresolved_pending_audit

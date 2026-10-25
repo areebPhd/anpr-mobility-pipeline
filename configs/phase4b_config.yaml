@@ -1,0 +1,44 @@
+eligibility:
+  different_cameras: true
+  exact_verified_endpoints: true
+  valid_directed_historical_route: true
+  positive_duration: true
+  inferred_camera_mappings: prohibited
+primary_rule:
+  rule_id: primary_d60_global130_route1_5_direction
+  maximum_duration_seconds: 3600
+  maximum_global_speed_kph: 130
+  route_average_speed_tolerance: 1.5
+  minimum_direction_compatibility: 0.25
+sensitivity_rules:
+  - rule_id: conservative_d30_global130_route1_5_direction
+    maximum_duration_seconds: 1800
+    maximum_global_speed_kph: 130
+    route_average_speed_tolerance: 1.5
+    minimum_direction_compatibility: 0.25
+  - rule_id: inclusive_d120_global130
+    maximum_duration_seconds: 7200
+    maximum_global_speed_kph: 130
+duration_candidates_seconds: [300, 600, 900, 1800, 3600, 7200, 14400]
+route_class_maximum_kph:
+  motorway: 130
+  motorway_link: 100
+  trunk: 120
+  trunk_link: 90
+  primary: 100
+  primary_link: 80
+  secondary: 90
+  secondary_link: 70
+  tertiary: 80
+  tertiary_link: 60
+  residential: 50
+  living_street: 30
+  unclassified: 70
+  road: 70
+  disused: 30
+governance:
+  inferred_matches_in_primary: false
+  final_corridors: prohibited
+  final_splits: prohibited
+  dashboard: prohibited
+  phase5: prohibited

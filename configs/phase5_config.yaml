@@ -1,0 +1,28 @@
+inputs:
+  phase4b_decisions: restricted/phase4b_plausible_journey_legs/full_v3/origin_week=*/*.parquet
+  phase3a_candidates: restricted/phase3a_candidate_transitions/candidates/candidate_transitions.parquet
+outputs:
+  restricted_root: restricted/phase5_final_mobility_outputs
+privacy:
+  primary_minimum_cell_count: 10
+  sensitivity_counts: [1, 3, 5, 10, 20, 50, 100]
+corridors:
+  primary_method: directed_exact_camera_pair
+  administrative_names: prohibited
+splits:
+  sequence_hash_seed: chapter3-phase5-v1
+  primary_sequence_proportions: [70, 15, 15]
+  alternative_sequence_proportions: [80, 10, 10]
+  primary_time_blocks:
+    train_weeks: [1, 25]
+    validation_weeks: [26, 30]
+    test_weeks: [31, 35]
+  alternative_time_blocks:
+    train_weeks: [1, 24]
+    validation_weeks: [25, 29]
+    test_weeks: [30, 35]
+governance:
+  source_vehicle_tokens: prohibited
+  sequence_keys_in_reports: prohibited
+  dashboard: prohibited
+  chapter_rewrite: prohibited
