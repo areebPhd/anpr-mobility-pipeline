@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Please cite this software and the associated PhD thesis; final thesis deposit metadata is pending."
+title: "ANPR mobility construction pipeline"
+type: software
+version: 0.1.0
+authors:
+  - family-names: Alshoshan
+    given-names: Areeb
+license: MIT
+date-released: 2026-10-25
+repository-code: "https://github.com/areebPhd/anpr-mobility-pipeline"

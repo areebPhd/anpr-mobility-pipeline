@@ -1,0 +1,8 @@
+duckdb
+polars
+pyarrow
+pyyaml
+pytest
+rich
+psutil
+charset-normalizer
